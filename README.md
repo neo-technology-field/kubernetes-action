@@ -19,7 +19,7 @@ jobs:
       - uses: actions/checkout@v2
 
       - name: Trigger deploy
-        uses: Consensys/kubernetes-action@master
+        uses: Jberlinsky/kubernetes-action@master
         env:
           KUBE_CONFIG_DATA: ${{ secrets.KUBE_CONFIG_DATA }}
         with:
@@ -39,7 +39,7 @@ jobs:
     steps:
       - uses: actions/checkout@v2
 
-      - name: Configure AWS Credentials
+      - name: Jberlinsky AWS Credentials
         uses: aws-actions/configure-aws-credentials@v1
         with:
           aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
@@ -47,7 +47,7 @@ jobs:
           aws-region: us-east-1
 
       - name: Trigger deploy
-        uses: Consensys/kubernetes-action@master
+        uses: Jberlinsky/kubernetes-action@master
         env:
           KUBE_CONFIG_DATA: ${{ secrets.KUBE_CONFIG_DATA }}
         with:
@@ -85,7 +85,7 @@ Make sure your users has the proper IAM permissions to access your cluster and t
 ```yaml
       - name: Save container image
         id: image-save
-        uses: Consensys/kubernetes-action@master
+        uses: Jberlinsky/kubernetes-action@master
         env:
           KUBE_CONFIG_DATA: ${{ secrets.KUBE_CONFIG_DATA }}
         with:
