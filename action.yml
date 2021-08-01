@@ -1,4 +1,4 @@
-name: "Kubernetes Action with aws-iam-authenticator"
+name: "Kubernetes Action for AWS EKS"
 description: "Interacts with kubernetes clusters calling kubectl commands. Integrates support for AWS EKS via aws-iam-authenticator."
 branding:
   icon: 'anchor'  
